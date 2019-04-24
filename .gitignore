@@ -1,0 +1,9 @@
+docs/
+.vscode/
+environment/
+tests/
+data/
+graphs/
+backups/
+__pycache__
+README.html

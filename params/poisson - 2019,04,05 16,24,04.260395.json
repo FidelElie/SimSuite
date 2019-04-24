@@ -1,0 +1,11 @@
+{
+	"mode": "poisson",
+	"dimensions": 50,
+    "timesteps": 150,
+    "default_values": [50, 10000, "jacobi", "point", "charges", 1, 0.001],
+    "poi_type": "gauss",
+    "charge_type": "line",
+    "quantities": "magnetic",
+    "dx_value": 1,
+    "limit": 0.001
+}

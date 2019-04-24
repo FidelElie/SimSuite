@@ -1,0 +1,8 @@
+{
+    "mode": "gol",
+    "dimensions": null,
+    "default_values": [50, 100, null, "glider"],
+    "timesteps": null,
+    "percentage": null,
+    "struct_mode": "fafaf"
+}

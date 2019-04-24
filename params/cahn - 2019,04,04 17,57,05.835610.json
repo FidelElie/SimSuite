@@ -1,0 +1,13 @@
+{
+    "mode": "cahn",
+    "dimensions": "100",
+    "timesteps": "10000",
+    "default_values": [100, 10000, "visual", 1, 0.1, 0.1, 0.1, 0, 0.5],
+    "sim_type": "full",
+    "dx_value": "1",
+    "M": "0.1",
+    "a_and_b": "0.1",
+    "k": "0.1",
+    "sig0": "0",
+    "noise": "0.5"
+}

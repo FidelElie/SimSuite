@@ -1,0 +1,11 @@
+{
+	"mode": "poisson",
+	"dimensions": null,
+    "timesteps": null,
+    "default_values": [50, 10000, "jacobi", "point", "charges", 1, 1],
+    "poi_type": null,
+    "charge_type": null,
+    "quantities": null,
+    "dx_value": null,
+    "limit": null
+}

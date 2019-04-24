@@ -1,0 +1,9 @@
+{
+    "mode": "sirs",
+    "dimensions": null,
+    "default_values": [50, 1000, "visual", "cyclic", []],
+    "timesteps": null,
+    "sim_type": null,
+    "dyn_mode": null,
+    "prob": []
+}

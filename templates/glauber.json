@@ -1,0 +1,8 @@
+{
+    "mode": "glauber",
+    "dimensions": null,
+    "default_values": [50, 1000, "visual", null],
+    "timesteps": null,
+    "sim_type": null,
+    "tempurature": null
+}
