@@ -22,7 +22,6 @@ class SimulationPlane(object):
 
     def create_figure(self):
         """ Creates the figure elements for the simulations """
-        plt.rcParams.update(general_utils.returnGraphConfigs("anim"))
         self.fig = plt.figure()
         self.axes = plt.axes()
         self.axes.set_xlabel("Cells In X (Columns)")
@@ -74,11 +73,11 @@ class SimulationPlane(object):
 
     def d_index(self, coord):
         """Decrease index number in array in up or right directions"""
-        return coord - 1 if coord - 1 < 0 else self.dimensions - 1
+        return coord - 1 if coord - 1 > 0 else self.dimensions - 1
 
     def i_index(self, coord):
         """Increase index number in array in down or left directions"""
-        return coord + 1 if coord + 1 > self.dimensions - 1 else 0
+        return coord + 1 if coord + 1 < self.dimensions - 1 else 0
 
     def end_simulation(self):
         time.sleep(1)

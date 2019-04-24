@@ -32,30 +32,6 @@ def pick_parameter(identifier, iterable = None):
                         break
         return iterable[chosen_option - 1]
 
-def returnGraphConfigs(fig_call):
-    """Returns general figure configurations for matplotlib"""
-    anim_fig = {
-        "font.family": "Courier New",
-        "axes.titlesize": 22,
-        "axes.titlepad": 8.0,
-        "axes.labelsize": 15,
-        "axes.labelpad": 8.0,
-        "figure.autolayout": True,
-    }
-    subplot_fig = {
-        "font.family": "Courier New",
-        "figure.titlesize": 22,
-        "axes.titlesize": 18,
-        "axes.titlepad": 8.0,
-        "axes.labelsize": 15,
-        "axes.labelpad": 8.0,
-    }
-    if fig_call == "anim":
-        fig_params = anim_fig
-    elif fig_call == "subplots":
-        fig_params = subplot_fig
-    return (fig_params)
-
 def list_options(iterable):
     """List options from a iterable with numbers"""
     for i, item in enumerate(iterable, 1):
