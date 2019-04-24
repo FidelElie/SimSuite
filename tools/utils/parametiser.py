@@ -37,7 +37,6 @@ class Parametiser(object):
         if self.flag != False:
             self.check_template()
 
-    # TODO add type checks to values
     def check_template(self):
         if len(self.params) != len(self.default_values):
             print ("Template Error: Number of default Values do not match the amount of modifiable parameters")
