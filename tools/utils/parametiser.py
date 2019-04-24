@@ -3,7 +3,7 @@ from tools.utils import general_utils
 class Parametiser(object):
     # FIXME Not Dynamic, have to add sim info manually
 
-    manifest = general_utils.load_json_file(general_utils.join_path(general_utils.TEMPLATEPATH, "manifest.json"))
+    manifest = general_utils.load_json_file(general_utils.join_path(general_utils.SIM_TEMPLATES, "manifest.json"))
 
     params = {}
     sim_mode = None
@@ -16,7 +16,7 @@ class Parametiser(object):
 
     def load_template(self):
         print ("\nChoosing template file")
-        files = general_utils.get_directory_contents(general_utils.SAVEPATH)
+        files = general_utils.get_directory_contents(general_utils.SAVE_PATH)
         if len(files) == 0:
             print(
                 "No template files present, use creator module to create file")
@@ -25,7 +25,7 @@ class Parametiser(object):
             chosen_file = general_utils.pick_parameter("Template File", files)
 
             file_path = general_utils.join_path(
-                general_utils.SAVEPATH, chosen_file)
+                general_utils.SAVE_PATH, chosen_file)
 
             self.params = general_utils.load_json_file(file_path)
 
