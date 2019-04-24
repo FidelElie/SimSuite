@@ -10,6 +10,12 @@ class Reaction(SimulationPlane):
         self.dt = dt
 
     #override
+    def start_sim(self):
+        self.create_cells()
+        self.create_figure()
+        super().start_sim()
+
+    #override
     def create_figure(self):
         super().create_figure()
         self.axes.set_title("Reaction-Diffusion Simulation For {} Cells".format(self.dimensions ** 2))
@@ -42,13 +48,14 @@ class Reaction(SimulationPlane):
         )
         constants = self.dt * self.calc_row(i, j) - self.k * self.cells[i, j]
         new_value = laplacian + constants
+        print (new_value)
         return new_value
 
     def calc_row(self, i , j):
         i_component = i - (self.dimensions / 2)
         j_component = j - (self.dimensions / 2)
-        vector_r = np.array([i_component, j_component])
-        mag_r  = np.sqrt(np.dot(vector_r ** 2))
+        mag_r  = np.sqrt(i_component ** 2 + j_component ** 2)
         row = np.exp(-(mag_r ** 2) / (self.sigma ** 2))
+        print(row)
         return row
 

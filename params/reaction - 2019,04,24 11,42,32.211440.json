@@ -1,0 +1,9 @@
+{
+	"mode": "reaction",
+	"dimensions": 50,
+	"timesteps": 1000,
+    "default_values":[50, 10000, 0, 0, 0],
+    "k": 1,
+    "sigma": 0.1,
+    "dt": 0.1
+}
