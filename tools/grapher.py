@@ -23,7 +23,6 @@ class Grapher(UtilityBase):
     def create_figure(self):
         """Creates figure for plotting and subplotting"""
         self.figure = plt.figure()
-        plt.rcParams.update(general_utils.returnGraphConfigs("subplots"))
 
     def plot_data(self, file_name):
         """Plots the data based on simulations chosen"""
