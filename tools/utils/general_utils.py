@@ -87,6 +87,8 @@ def write_data(data, file_data, sim_info):
     print ("Data succesfully saved as {}".format(data_file_name))
 
 def check_directories():
+    if os.path.basename(os.getcwd()) != "SimSuite":
+        raise Exception("Please Run Programme From Base Directory")
     if os.path.isdir(DATAPATH) == False:
         os.mkdir("data")
     if os.path.isdir(GRAPHSPATH) == False:
@@ -162,6 +164,13 @@ def get_sim_modes():
             modes.append(files.replace(".json",""))
     return modes
 
+def command_line_error(name):
+    print("Command Line Error: Not Enough Arguements Given for --{} call".format(name.replace("_", "-")))
+
+def print_cl_commands():
+    commands_str = "--new-template <arguement>: creates new template file\n--new-simulation <arguement>: creates new simulation and corresponding template file\n--new-module <arguement>: creates new module\n--shortcut <arguement>: jumps to module\n--readme: opens the programme readme\n--help-commands: displays command line call syntax (You Just Called It)"
+    print(commands_str)
+
 def str_to_class(package, name):
     return getattr(sys.modules["{}.{}".format(package, name)], name.title())
 
@@ -171,14 +180,3 @@ def get_py_files(path):
         if "__init__" not in files and "__pycache__" not in files and ".pyd" not in files and os.path.isdir(os.path.join(path, files)) == False:
             classes.append(files.replace(".py",""))
     return classes
-
-def command_line_error(name):
-    print("Command Line Error: Not Enough Arguements Given for --{} call".format(name.replace("_", "-")))
-
-def open_readme():
-    print("Opening README in default browser")
-    webbrowser.open("README.html")
-
-def print_cl_commands():
-    commands_str = "--new-template <arguement>: creates new template file\n--new-simulation <arguement>: creates new simulation and corresponding template file\n--new-module <arguement>: creates new module\n--shortcut <arguement>: jumps to module\n--readme: opens the programme readme\n--help-commands: displays command line call syntax (You Just Called It)"
-    print(commands_str)
