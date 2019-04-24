@@ -134,7 +134,7 @@ def create_simulation(sim_name):
     # data for each file
     class_template = "import numpy as np\nfrom packages.controller import SimulationPlane\nfrom tools.utils import utils\n\nclass {}(SimulationPlane):\n\tdef __init__(self, dimensions, timesteps):\n\t\tsuper().__init__(dimensions, timesteps)\n\n\t#override\n\tdef create_figure(self):\n\t\tsuper().create_figure()\n\n\t#override\n\tdef create_cells(self):\n\t\tpass\n\n\t#override\n\tdef anim_func(self, i):\n\t\tpass".format(sim_name.title())
 
-    data_string = "\t\"mode\": \"{}\",\n\t\"dimensions\": \"null\",\n\t\"timesteps\": \"null\",\n\t\"default_values\":[]".format(sim_name)
+    data_string = "\t\"mode\": \"{}\",\n\t\"dimensions\": null,\n\t\"timesteps\": null,\n\t\"default_values\":[]".format(sim_name)
     data = "{{\n{}\n}}".format(data_string)
 
     # writing data to files
