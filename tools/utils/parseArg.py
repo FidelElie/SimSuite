@@ -15,7 +15,6 @@ class ParseArg(object):
             ("--new-simulation", "new", self.new_simulation),
             ("--new-module", "new", self.new_module),
             ("--shortcut", None, self.shortcut),
-            ("--readme", "docs", general_utils.open_readme),
             ("--help-commands", "help", general_utils.print_cl_commands)]
         self.calls = [command[0] for command in self.commands]
         self.flags = [flag[1] for flag in self.commands]

@@ -85,7 +85,7 @@ The template system was created in an effort to decrease the risk of entering in
 * timesteps: integer > 0.
 * sim_type: str takes value of 'visual' or 'full'.
 * tempurature: int between 1 and 5
-* struct_mode: str takes values of 'static', 'blinker', 'toad', 'glider', 'pulsar', 'beacon', 'gun', 'pentadecon', 'heavyglider' and 'none' (no structure added).
+* struct_mode: str takes values of 'static', 'blinker', 'toad', 'glider' and 'none' (no structure added).
 * dyn_mode: str takes values of 'cyclic', 'absorbing', 'half', 'dynamic', 'cut' and 'none' (default start state)
 * prob: list (array object in json terms) of length 3.
 * *cahn simulation*: all values other than the default first three are floating point numbers.

@@ -1,0 +1,6 @@
+--new-template <arguement>: creates new template file
+--new-simulation <arguement>: creates new simulation and corresponding template file
+--new-module <arguement>: creates new module
+--shortcut <arguement>: jumps to module
+--readme: opens the programme readme
+--help-commands: displays command line call syntax (You Just Called It)

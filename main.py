@@ -8,7 +8,7 @@ def main():
     general_utils.check_directories()
 
     # gets name of module python files tools/utils
-    modules = general_utils.get_py_files(general_utils.MODULEPATH)
+    modules = general_utils.get_py_files(general_utils.MODULE_PATH)
 
     # resolves module class names into a list (references to classes)
     module_class = [general_utils.str_to_class("tools", module) for module in modules]
