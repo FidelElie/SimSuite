@@ -27,6 +27,7 @@ class Reaction(SimulationPlane):
         for i in range(self.dimensions):
             for j in range(self.dimensions):
                 self.cells[i, j] += 0.5
+
     #override
     def anim_func(self, i):
         self.new_cells = np.copy(self.cells)
@@ -48,7 +49,6 @@ class Reaction(SimulationPlane):
         )
         constants = self.dt * self.calc_row(i, j) - self.k * self.cells[i, j]
         new_value = laplacian + constants
-        print (new_value)
         return new_value
 
     def calc_row(self, i , j):
@@ -56,6 +56,5 @@ class Reaction(SimulationPlane):
         j_component = j - (self.dimensions / 2)
         mag_r  = np.sqrt(i_component ** 2 + j_component ** 2)
         row = np.exp(-(mag_r ** 2) / (self.sigma ** 2))
-        print(row)
         return row
 
